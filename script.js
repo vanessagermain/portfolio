@@ -51,3 +51,62 @@ document.querySelectorAll('.magnet').forEach(btn => {
   });
   btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
 });
+
+// ===== SPA case-study overlay =====
+(function () {
+  const overlay = document.getElementById('cs-overlay');
+  const frame = document.getElementById('cs-frame');
+  const closeBtn = document.getElementById('cs-close');
+  if (!overlay || !frame) return;
+
+  let scrollY = 0;
+  let loadedSrc = null;
+
+  function open(src) {
+    scrollY = window.scrollY || window.pageYOffset;
+    if (loadedSrc !== src) {
+      overlay.classList.remove('loaded');
+      frame.src = src + (src.indexOf('?') > -1 ? '&' : '?') + 'embed=1';
+      loadedSrc = src;
+    } else {
+      overlay.classList.add('loaded');
+    }
+    document.body.style.top = -scrollY + 'px';
+    document.body.classList.add('cs-open');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    if (location.hash !== '#case') history.pushState({ cs: true }, '', '#case');
+  }
+
+  function close() {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('cs-open');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollY);
+    if (location.hash === '#case') history.replaceState(null, '', location.pathname + location.search);
+  }
+
+  frame.addEventListener('load', function () {
+    if (frame.src) overlay.classList.add('loaded');
+  });
+
+  document.querySelectorAll('[data-cs]').forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      e.preventDefault();
+      open(card.getAttribute('data-cs'));
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) close();
+  });
+  window.addEventListener('popstate', function () {
+    if (overlay.classList.contains('open')) close();
+  });
+  // case study asks to return to the portfolio
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.cs === 'close' && overlay.classList.contains('open')) close();
+  });
+})();

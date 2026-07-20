@@ -11,7 +11,7 @@
 <body>
 
 <header id="site-header">
-  <a href="#top" id="logo"><span id="logo-badge">Vg</span></a>
+  <a href="#top" id="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})"><img id="logo-img" src="assets/logo.png" alt="Vanessa Germain"></a>
   <nav id="nav">
     <a href="#work" class="nav-link">WORK</a>
     <a href="#about" class="nav-link">ABOUT</a>
@@ -48,8 +48,8 @@
     </div>
     <div class="about-grid">
       <div class="portrait-wrap" data-reveal>
-        <div class="portrait-bg"></div>
-        <div class="portrait-slot">Drop your portrait here</div>
+        <div class="portrait-bg" style="width: 362px; height: 407px"></div>
+        <img class="portrait-slot" src="./screenshot-2026-07-20-at-2-49-34-pm-mrt823f6-6582.png" alt="Portrait" width="1260" height="1436" style="width: 356px; height: 400px; aspect-ratio: 1260 / 1436; object-fit: fill">
       </div>
       <div class="about-copy" data-reveal>
         <p class="lede">I craft <span class="serif orange">emotionally-driven</span> digital experiences and solve for technical and complex challenges.</p>
@@ -79,7 +79,7 @@
     <div class="work-grid">
       <a href="#work" class="work-card" data-reveal>
         <div class="work-shot work-shot--a">
-          <div class="img-slot">Drop project shot — SaaS redesign</div>
+          <img class="work-img" src="assets/requirements.avif" alt="Requirements traceability tool">
         </div>
         <div class="work-title-row">
           <div class="work-title">Streamline product to reduce complexity while delivering the essentials for maximum impact</div>
@@ -87,9 +87,9 @@
         </div>
         <div class="work-desc">A complete requirements tool that provides end-to-end traceability with a focus on simplicity and impact in mind.</div>
       </a>
-      <a href="#work" class="work-card" data-reveal>
+      <a href="liseberg.html" class="work-card" data-cs="liseberg.html" data-reveal>
         <div class="work-shot work-shot--b">
-          <div class="img-slot">Drop project shot — amusement park app</div>
+          <img class="work-img" src="./liseberg-2--mrt8ijnk-xl97.png" alt="Liseberg amusement park app" width="1752" height="1020" style="width: 100%; height: 100%; aspect-ratio: 1752 / 1020; object-fit: fill">
         </div>
         <div class="work-title-row">
           <div class="work-title">Crafting an unforgettable Amusement Park adventure with User-Centered Design</div>
@@ -111,10 +111,16 @@
   <div class="footer-inner">
     <div></div>
     <div>© 2026 VANESSA GERMAIN</div>
-    <a href="/cdn-cgi/l/email-protection#7e191b0c131f171050081f101b0d0d1f4f4f3e19131f1712501d1113"><span class="__cf_email__" data-cfemail="d39496819e929a9dfd85929d96808092e2e293949e929a9ffd909c9e">[email&#160;protected]</span></a>
+    <a href="mailto:germain.vanessa11@gmail.com">GERMAIN.VANESSA11@GMAIL.COM</a>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+<div id="cs-overlay" aria-hidden="true">
+  <button id="cs-close" aria-label="Close case study"><span class="cs-close-arrow">←</span> CLOSE</button>
+  <div id="cs-loader"><span class="cs-spinner"></span></div>
+  <iframe id="cs-frame" title="Case study" loading="lazy"></iframe>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
