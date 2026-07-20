@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liseberg — Virtual Queue Redesign · Vanessa Germain</title>
+<meta name="description" content="Case study: crafting an unforgettable amusement park adventure with user-centered design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="liseberg.css">
+</head>
+<body>
+
+<div id="progress"><div id="progress-bar"></div></div>
+
+<header id="site-header">
+  <a href="index.html" id="logo"><span id="logo-badge">Vg</span></a>
+  <nav id="nav">
+    <a href="index.html#work" class="nav-link">PORTFOLIO</a>
+    <a href="index.html#about" class="nav-link">ABOUT</a>
+    <a href="mailto:germain.vanessa11@gmail.com" class="nav-link nav-link--solid">RESUME</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section id="hero" data-screen-label="Hero">
+    <div class="wrap">
+      <div class="hero-meta">
+        <span class="kicker"><span class="dot"></span>CASE STUDY № 02</span>
+        <span class="hero-year">LISEBERG · 2024</span>
+      </div>
+      <h1>Crafting an unforgettable <span class="serif orange">amusement park adventure</span> with user-centered design</h1>
+      <dl class="facts">
+        <div class="fact"><dt>PROJECT</dt><dd>Liseberg — Virtual Queue</dd></div>
+        <div class="fact"><dt>YEAR</dt><dd>2024</dd></div>
+        <div class="fact"><dt>PLATFORM</dt><dd>Mobile app</dd></div>
+        <div class="fact"><dt>METHODS</dt><dd>UX research, interaction design, prototyping, usability testing</dd></div>
+      </dl>
+    </div>
+    <div class="wrap hero-shot-wrap">
+      <figure class="figure plate">
+        <img class="shot-img" src="uploads/Group 11.png" alt="Liseberg final app screens — home, map, and virtual queue on three phones">
+      </figure>
+    </div>
+  </section>
+
+  <!-- 01 CONTEXT -->
+  <section class="chapter" id="context" data-screen-label="01 Context">
+    <div class="wrap">
+      <div class="chapter-head" data-reveal>
+        <span class="ch-num">01</span>
+        <span class="ch-name">Context</span>
+        <span class="ch-tag">WHY THE QUEUE ✳</span>
+      </div>
+      <p class="lede" data-reveal>From surveys and talking to friends who use the Liseberg app, I learned that the main reasons for downloading it are to <span class="serif orange">purchase annual passes</span> and to make use of the theme park's <span class="serif orange">virtual queue</span>.</p>
+
+      <div class="statement-grid">
+        <div class="statement" data-reveal>
+          <span class="statement-tag">THE GOAL</span>
+          <p>Unlock opportunities within the virtual queue feature to <span class="hl">elevate the customer's in-park experience</span>.</p>
+        </div>
+        <div class="statement statement--muted" data-reveal>
+          <span class="statement-tag">THE ASSUMPTION</span>
+          <p>If customers spend less time in physical queues and go on more rides, they would have a better overall experience.</p>
+        </div>
+      </div>
+
+      <div class="figure-block" data-reveal>
+        <figure class="figure plate">
+          <img class="shot-img" src="uploads/Blueprint.png" alt="End-to-end service blueprint of the visitor journey, from planning to purchase">
+        </figure>
+        <figcaption class="cap">Service blueprint — mapping the visitor's journey from planning to purchase.</figcaption>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 PROCESS -->
+  <section class="chapter" id="stages" data-screen-label="02 Process">
+    <div class="wrap">
+      <div class="chapter-head" data-reveal>
+        <span class="ch-num">02</span>
+        <span class="ch-name">Process</span>
+        <span class="ch-tag">FIVE KEY STAGES ✳</span>
+      </div>
+
+      <!-- 01 -->
+      <div class="stage" data-reveal>
+        <div class="stage-marker"><span class="stage-num">i</span><span class="stage-name">Research &amp; Define</span></div>
+        <div class="stage-content">
+          <h3 class="stage-title">Top insights from usability testing</h3>
+          <ol class="insights">
+            <li><span class="insight-n">1</span><p>iPhone users have difficulty returning to the previous screen each time they are redirected to the web browser — which happens often, because the app isn't optimized for mobile use.</p></li>
+            <li><span class="insight-n">2</span><p>Many users mentioned the app is too text-heavy, making it difficult to find the information they're looking for.</p></li>
+            <li><span class="insight-n">3</span><p>They also wished they could get more detailed information about the rides they want to join the queue for.</p></li>
+          </ol>
+          <div class="params">
+            <div class="param-card">
+              <span class="param-tag">HYPOTHESIS</span>
+              <p>If customers can spend less time in physical queues and go on more rides, their overall experience will improve — meaning the feature has to be more functional and useful.</p>
+            </div>
+            <div class="hmw-row">
+              <div class="hmw-card">
+                <span class="hmw-tag">HMW 01</span>
+                <p>How might we help users pick the right queue?</p>
+              </div>
+              <div class="hmw-card">
+                <span class="hmw-tag">HMW 02</span>
+                <p>How might we help users get to the ride easily?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="stage" data-reveal>
+        <div class="stage-marker"><span class="stage-num">ii</span><span class="stage-name">Ideate</span></div>
+        <div class="stage-content">
+          <h3 class="stage-title">Brainstormed solutions</h3>
+          <p class="stage-body">I sketched solutions on paper, focusing on the interactions and making sure the required capabilities are met.</p>
+          <div class="figure--split">
+            <figure class="figure plate"><img class="shot-img" src="uploads/sketch.png" alt="Paper ideation sketches exploring queue flows and map entry points"></figure>
+            <ul class="ticks">
+              <li>Easily see all virtual queues I'm in.</li>
+              <li>See estimated walking time to the attraction from the last ride.</li>
+              <li>Join more queues as soon as an available slot comes up.</li>
+              <li>…and more.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="stage" data-reveal>
+        <div class="stage-marker"><span class="stage-num">iii</span><span class="stage-name">Prototyping</span></div>
+        <div class="stage-content">
+          <h3 class="stage-title">Refined sketches into detailed mockups of the main screens</h3>
+          <p class="stage-body">I created mockups mainly for usability testing.</p>
+          <div class="figure-block"><figure class="figure plate"><img class="shot-img" src="uploads/Prototyping.png" alt="Mid-fidelity mockups used for usability testing — map queue list and join virtual queue"></figure></div>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="stage" data-reveal>
+        <div class="stage-marker"><span class="stage-num">iv</span><span class="stage-name">Testing</span></div>
+        <div class="stage-content">
+          <h3 class="stage-title">Users appreciated the concept, but found the information unclear</h3>
+          <ul class="ticks ticks--warn ticks--tight">
+            <li>Most interpreted the displayed time incorrectly — e.g. reading it as the ride's total run time rather than the time to enter.</li>
+            <li>It was unclear that the ~20 minutes represented the buffer time between the previous and next ride.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="stage" data-reveal>
+        <div class="stage-marker"><span class="stage-num">v</span><span class="stage-name">Reiterate</span></div>
+        <div class="stage-content">
+          <h3 class="stage-title">Rewrite the HMW statements</h3>
+          <div class="pivot">
+            <p>After some consideration, I realized conflicting bookings don't have to be an issue — we could simply <span class="hl">hide the slots that conflict</span> with the user's current booking.</p>
+            <p>A more useful question: how might we <span class="hl">inform users of the time it takes to reach their next ride</span> from their current location?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 OUTCOME -->
+  <section class="chapter" id="results" data-screen-label="03 Outcome">
+    <div class="wrap">
+      <div class="chapter-head" data-reveal>
+        <span class="ch-num">03</span>
+        <span class="ch-name">Outcome</span>
+        <span class="ch-tag">AFTER SOME REVISIONS ✳</span>
+      </div>
+
+      <!-- Feature 1 -->
+      <div class="feature" data-reveal>
+        <div class="feature-head"><span class="feature-num">FEATURE 01</span><h3>Home</h3></div>
+        <ul class="ticks ticks--cols ticks--tight">
+          <li>See virtual queue info directly on the home page.</li>
+          <li>See program highlights by date.</li>
+          <li>Updated information architecture &amp; bottom navigation.</li>
+          <li>Dedicated page for buying tickets and virtual queue.</li>
+          <li>Combined "My Liseberg" and "Settings".</li>
+        </ul>
+        <div class="figure-block">
+          <figure class="figure plate">
+            <img class="shot-img" src="uploads/Home%20(1).png" alt="Home screen — current version, draft 1, and draft 2">
+          </figure>
+          <figcaption class="cap">Home — current version, then two drafts moving the queue up-front.</figcaption>
+        </div>
+
+        <div class="subfeature">
+          <h4>Virtual queue slideout</h4>
+          <div class="figure-block">
+            <figure class="figure plate">
+              <img class="shot-img" src="uploads/Virtual%20queue%20(1).png" alt="Virtual queue slideout — draft versus final version">
+            </figure>
+            <figcaption class="cap">Draft → final: a top slideout that always shows the key details.</figcaption>
+          </div>
+          <ul class="ticks ticks--tight">
+            <li>Opted for a top slideout.</li>
+            <li>Always show all details instead of expand / collapse.</li>
+            <li>Moved "leave queue" and "get directions" into "more" — not a frequent action.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature" data-reveal>
+        <div class="feature-head"><span class="feature-num">FEATURE 02</span><h3>Join virtual queue</h3></div>
+        <p class="stage-body">Entry point: the map and the queue tab.</p>
+        <div class="figure-block">
+          <figure class="figure plate">
+            <img class="shot-img" src="uploads/Feature%202.png" alt="Entry points — map, queue list, and select slot screens">
+          </figure>
+          <figcaption class="cap">Map → queue list → select slot.</figcaption>
+        </div>
+
+        <div class="subfeature">
+          <h4>Queue card item</h4>
+          <p class="stage-body">Like the queue card on the home tab, users can get directions to the attraction and leave the queue.</p>
+          <div class="figure-block">
+            <figure class="figure plate">
+              <img class="shot-img" src="uploads/Queue.png" alt="Queue card item — two drafts and the final version">
+            </figure>
+            <figcaption class="cap">Draft 1 → Draft 2 → Final.</figcaption>
+          </div>
+          <p class="impact">✓ Impact — utilises less space while displaying more useful information.</p>
+        </div>
+
+        <div class="subfeature">
+          <h4>Join virtual queue</h4>
+          <p class="stage-body">Initially I focused on when the last ride would end. As noted, that issue is solved by hiding conflicting times — so the final design instead informs the user of the <span class="hl">distance to the attraction from their current location</span>.</p>
+          <div class="figure-block">
+            <figure class="figure plate">
+              <img class="shot-img" src="uploads/Join%20virtual%20queue-8ff948a4.png" alt="Join virtual queue — two drafts and the final version">
+            </figure>
+            <figcaption class="cap">Draft 1 → Draft 2 → Final, showing distance to the attraction.</figcaption>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTRO / NEXT -->
+  <section id="outro" data-screen-label="Outro / Next">
+    <div class="outro-inner">
+      <p class="thanks" data-reveal>You've reached the bottom — <span class="orange">thank you for reading.</span></p>
+      <div class="next-block" data-reveal>
+        <span class="next-label">NEXT CASE STUDY</span>
+        <h3 class="next-title">Streamline product to reduce complexity while delivering the essentials for maximum impact</h3>
+        <a href="index.html#work" class="next-cta" data-back>VIEW NEXT PROJECT<span class="arrow">→</span></a>
+        <br>
+        <a href="index.html#work" class="back-link" data-back>← BACK TO ALL WORK</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="footer-inner">
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/vanessa-germain11/" target="_blank" rel="noopener">LINKEDIN</a>
+      <a href="https://dribbble.com/Chenyushan" target="_blank" rel="noopener">DRIBBBLE</a>
+    </div>
+    <div class="footer-mail">Got a question? <a href="mailto:germain.vanessa11@gmail.com">germain.vanessa11@gmail.com</a></div>
+    <div class="footer-copy">© 2026 VANESSA GERMAIN</div>
+  </div>
+</footer>
+
+<script src="liseberg.js"></script>
+</body>
+</html>
