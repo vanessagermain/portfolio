@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanessa Germain — Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hi there!</h1>
+
+<header id="site-header">
+  <a href="#top" id="logo"><span id="logo-badge">Vg</span></a>
+  <nav id="nav">
+    <a href="#work" class="nav-link">WORK</a>
+    <a href="#about" class="nav-link">ABOUT</a>
+    <a href="#contact" class="nav-link nav-link--solid">CONTACT</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section id="hero">
+    <div class="plx" data-plx="0.05" style="right:2%;top:60px"><div class="blob blob--pink"></div></div>
+    <div class="plx" data-plx="0.09" style="left:-1%;top:120px"><div class="blob blob--gold"></div></div>
+    <div class="plx" data-plx="0.07" style="right:12%;bottom:110px"><div class="ring"></div></div>
+    <div class="plx" data-plx="0.12" style="left:16%;bottom:70px"><div class="diamond"></div></div>
+
+    <div class="hero-inner">
+      <div class="eyebrow"><span class="dot"></span>AI PRODUCT DESIGNER</div>
+      <h1>Designing <span class="highlight">impactful</span> products from the ground up — blending <span class="serif orange">data,</span> <span class="serif green">creativity</span> &amp; <span class="serif orange">user-centered thinking</span> to tackle complex challenges.</h1>
+      <div class="realm-line">WORKING ACROSS THE <span id="realm-word">DIGITAL</span> REALM</div>
+      <div class="cta-row">
+        <a href="#work" class="btn btn--dark magnet">VIEW MY WORK<span class="arrow">→</span></a>
+        <a href="#contact" class="btn btn--outline magnet">SAY HI <span class="orange">✳</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <section id="about">
+    <div class="section-head" data-reveal>
+      <span class="num">01</span>
+      <h2>About</h2>
+      <span class="section-tag">HI THERE ✳</span>
+    </div>
+    <div class="about-grid">
+      <div class="portrait-wrap" data-reveal>
+        <div class="portrait-bg"></div>
+        <div class="portrait-slot">Drop your portrait here</div>
+      </div>
+      <div class="about-copy" data-reveal>
+        <p class="lede">I craft <span class="serif orange">emotionally-driven</span> digital experiences and solve for technical and complex challenges.</p>
+        <div class="two-col">
+          <p>With extensive experience in facilitation, design thinking and UX research, I specialise in translating customer insights into innovative concepts and user-centered products.</p>
+          <p>Now, I leverage my unique mix of experiences to help companies grow and build emotionally-driven products from the ground up.</p>
+        </div>
+        <div class="chips">
+          <span class="chip">AI PRODUCT DESIGN</span>
+          <span class="chip">PRODUCT STRATEGY</span>
+          <span class="chip">UX RESEARCH</span>
+          <span class="chip">3D & CONTENT</span>
+          <span class="chip">RAPID PROTOTYPING</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section id="work">
+  <div class="work-inner">
+    <div class="section-head" data-reveal>
+      <span class="num num--dark">03</span>
+      <h2 class="light">Selected works</h2>
+    </div>
+    <div class="work-grid">
+      <a href="#work" class="work-card" data-reveal>
+        <div class="work-shot work-shot--a">
+          <div class="img-slot">Drop project shot — SaaS redesign</div>
+        </div>
+        <div class="work-title-row">
+          <div class="work-title">Streamline product to reduce complexity while delivering the essentials for maximum impact</div>
+          <span class="work-arrow">→</span>
+        </div>
+        <div class="work-desc">A complete requirements tool that provides end-to-end traceability with a focus on simplicity and impact in mind.</div>
+      </a>
+      <a href="#work" class="work-card" data-reveal>
+        <div class="work-shot work-shot--b">
+          <div class="img-slot">Drop project shot — amusement park app</div>
+        </div>
+        <div class="work-title-row">
+          <div class="work-title">Crafting an unforgettable Amusement Park adventure with User-Centered Design</div>
+          <span class="work-arrow">→</span>
+        </div>
+        <div class="work-desc">Spend less time waiting in lines and more time making memories. The redesigned app puts user first, offering seamless virtual queue management and a more enjoyable park experience.</div>
+      </a>
+    </div>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span>Let's work together ✳ Let's work together ✳ Let's work together ✳ Let's work together ✳&nbsp;</span>
+      <span>Let's work together ✳ Let's work together ✳ Let's work together ✳ Let's work together ✳&nbsp;</span>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="footer-inner">
+    <div></div>
+    <div>© 2026 VANESSA GERMAIN</div>
+    <a href="/cdn-cgi/l/email-protection#7e191b0c131f171050081f101b0d0d1f4f4f3e19131f1712501d1113"><span class="__cf_email__" data-cfemail="d39496819e929a9dfd85929d96808092e2e293949e929a9ffd909c9e">[email&#160;protected]</span></a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 </body>
 </html>
